@@ -8,7 +8,10 @@ wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
 
 apt-get update
 
-apt-get install -y build-essential rethinkdb
+apt-get install -y build-essential rethinkdb python-pip
+
+# this is needed to use rethinkdb dump / restore
+sudo pip install rethinkdb
 
 cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/instance1.conf
 

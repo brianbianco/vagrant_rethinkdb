@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
     c.vm.network "private_network", ip: "192.168.175.100"
     c.vm.hostname = "rt1"
     c.vm.provision :shell, :path => File.join(scripts_dir, "rethinkdb.sh")
+    c.vm.provision :file, source: "./heroes.tar.gz", destination: "./heroes.tar.gz" 
   end
 
   (2..4).each do |n|

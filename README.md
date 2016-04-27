@@ -17,3 +17,12 @@ Nodes will be named rt1 - rt4
 ## WebUI
 
 The webui will be accessible as http://192.168.175.100:8080
+
+## Populating a sample data set
+
+A heroes.tar.gz is included in this git repo as a sample data set.
+
+```
+vagrant ssh rt1
+rethinkdb restore heroes.tar.gz
+```
